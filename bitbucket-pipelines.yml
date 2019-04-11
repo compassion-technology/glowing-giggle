@@ -1,0 +1,36 @@
+image:
+  name: 749003920079.dkr.ecr.us-east-1.amazonaws.com/node-aws-base:latest
+  aws:
+    access-key: $AWS_ACCESS_KEY
+    secret-key: $AWS_SECRET_ACCESS_KEY
+
+pipelines:
+
+  # for non-master branches, just test and build
+  default:
+    - step:
+        name: Run unit tests
+        script:
+          - npm install
+          - npm test
+
+  # for master branch, test, build, and deploy to test
+  branches:
+    master:
+      - step:
+          name: Run unit tests
+          script:
+            - npm install
+            - npm test
+      - step:
+          name: Build react app
+          script:
+            - npm install
+            - npm run build:prod
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy to test
+          deployment: test
+          script:
+            - bash deploy.sh test
