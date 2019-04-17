@@ -41,9 +41,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^6.0.1",
-    "react-router-dom": "^5.0.0",
-    "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "react-router-dom": "^5.0.0"
   },
   "jest": {
     "setupFilesAfterEnv": [
@@ -52,7 +50,7 @@
     "moduleNameMapper": {
       "^@components(.*)": "<rootDir>/src/components$1",
       "^@pages(.*)": "<rootDir>/src/pages$1",
-      "^@actions(.*)": "<rootDir>/src/redux/actions$1",
+      "^@assets(.*)": "<rootDir>/src/assets$1",
       "\\.module\\.css$": "<rootDir>/node_modules/jest-css-modules"
     }
   },
