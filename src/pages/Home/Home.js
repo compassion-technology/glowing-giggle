@@ -4,7 +4,7 @@ import styles from './Home.module.css'
 
 const Home = () => {
   return (
-    <p className={styles.home}>Hello from home, really.</p>
+    <p className={styles.home}>React Template</p>
   )
 }
 

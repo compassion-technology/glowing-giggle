@@ -34,20 +34,25 @@ module.exports = {
             modules: false
           }
         }]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        include: path.resolve(__dirname, root, 'src/assets'),
+        use: [ 'file-loader' ]
       }
     ]
   },
   resolve: {
     alias: {
       '@components': path.resolve(__dirname, root, 'src/components'),
-      '@pages': path.resolve(__dirname, root, 'src/pages'),
-      '@actions': path.resolve(__dirname, root, 'src/redux/actions')
+      '@pages': path.resolve(__dirname, root, 'src/pages')
     },
     extensions: ['*', '.js', '.jsx']
   },
   output: {
     filename: '[name].[hash].bundle.js',
-    path: path.resolve(__dirname, root, 'build')
+    path: path.resolve(__dirname, root, 'build'),
+    publicPath: '/'
   },
   plugins: [
     new HtmlWebpackPlugin({
