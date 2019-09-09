@@ -1,6 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const root = '../'
 
@@ -19,7 +18,7 @@ module.exports = {
         test: /\.module\.css$/,
         exclude: /node_modules/,
         use: [
-          MiniCssExtractPlugin.loader,
+          'style-loader',
           {
             loader: 'css-loader',
             options: {
@@ -33,7 +32,7 @@ module.exports = {
         test: /\.css$/,
         exclude: [/node_modules/, /\.module\.css$/],
         use: [
-          MiniCssExtractPlugin.loader,
+          'style-loader',
           {
             loader: 'css-loader',
             options: {
@@ -73,10 +72,6 @@ module.exports = {
     publicPath: '/'
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].[hash].css',
-      chunkFilename: '[id].css'
-    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, root, 'src/index.html')
     })
