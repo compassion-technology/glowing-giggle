@@ -8,7 +8,7 @@
     "test": "eslint . && jest",
     "fix": "eslint . --fix",
     "build:profile": "webpack --config ./webpack/webpack.config.js --mode production --profile --json > stats.json",
-    "analyze": "webpack-bundle-analyzer ./stats.json"
+    "analyze": "webpack-bundle-analyzer ./stats.json dist"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
