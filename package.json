@@ -1,12 +1,12 @@
 {
-  "name": "the-inn",
+  "name": "react-template",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/webpack.config.js --mode development",
     "build:prod": "webpack --config ./webpack/webpack.config.js --mode production",
     "test": "eslint . && jest",
-    "fix": "eslint .  --fix",
+    "fix": "eslint . --fix",
     "build:profile": "webpack --config ./webpack/webpack.config.js --mode production --profile --json > stats.json",
     "analyze": "webpack-bundle-analyzer ./stats.json"
   },
@@ -24,8 +24,10 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.18.0",
     "file-loader": "^5.0.2",
@@ -34,6 +36,7 @@
     "jest": "^25.1.0",
     "mini-css-extract-plugin": "^0.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "prettier": "^1.19.1",
     "react-hot-loader": "^4.12.19",
     "react-test-renderer": "^16.12.0",
     "webpack": "^4.41.5",
