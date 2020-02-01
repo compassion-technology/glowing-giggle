@@ -3,12 +3,11 @@
     ["@babel/preset-env", {
       "targets": "> 0.2%",
       "useBuiltIns": "usage",
-      "corejs": 3
+      "corejs": "3.6"
     }],
     "@babel/preset-react"
   ],
   "plugins": [
-    "@babel/plugin-syntax-dynamic-import",
-    "@babel/plugin-proposal-class-properties"
+    "@babel/plugin-syntax-dynamic-import"
   ]
 }
