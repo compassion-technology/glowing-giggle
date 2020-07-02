@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import App from './App'
 
 describe('App', () => {
-  it('should render App component', () => {
+  it('should render the App component', () => {
     const component = shallow(<App />)
     expect(component).toBeDefined()
   })

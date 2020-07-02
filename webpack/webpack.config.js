@@ -104,7 +104,8 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, root, 'src/index.html')
+        template: path.resolve(__dirname, root, 'src/index.html'),
+        title: 'React Template'
       }),
       new MiniCssExtractPlugin({
         filename: devMode ? '[name].css' : '[name].[hash].css',

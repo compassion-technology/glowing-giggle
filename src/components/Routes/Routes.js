@@ -1,17 +1,12 @@
 import React from 'react'
-import { Switch, Route, Router } from 'react-router'
-import { createBrowserHistory } from 'history'
+import { Switch, Route } from 'react-router'
 
 import Home from '@pages/Home'
 
-const history = createBrowserHistory()
-
 const Routes = () => (
-  <Router history={history}>
-    <Switch>
-      <Route exact path='/' component={Home} />
-    </Switch>
-  </Router>
+  <Switch>
+    <Route exact path='/' component={Home} />
+  </Switch>
 )
 
 export default Routes
