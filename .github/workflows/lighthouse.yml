@@ -1,0 +1,47 @@
+# This will run a Lighthouse check on the contents of a pull request.
+# This job will only run when a pull request is submitted to the development & master branches
+
+name: Lighthouse
+
+on:
+  pull_request:
+    branches: [ development, master ]
+
+jobs:
+  get-netlify-url:
+    runs-on: ubuntu-latest
+    outputs:
+      pr_url: ${{ steps.getURL.outputs.prURL }}
+    steps:
+      - uses: actions/github-script@0.9.0
+        id: getURL
+        with:
+          github-token: ${{github.token}}
+          script: |
+            const prNumber = context.payload.number;
+            const prURL = `https://deploy-preview-${prNumber}--template.netlify.app/`
+            core.setOutput('prURL', prURL);
+            console.log(prURL)
+
+  lighthouse-check:
+    runs-on: ubuntu-latest
+    needs: get-netlify-url
+    steps:
+      - name: Wait for Netlify to build before we check the URL
+        uses: jakejarvis/wait-action@master
+        with:
+          time: '45s'
+      - name: Run Lighthouse
+        uses: foo-software/lighthouse-check-action@master
+        id: lighthouseCheck
+        with:
+          urls: ${{ needs.get-netlify-url.outputs.pr_url }}
+      - name: Handle Lighthouse Check results
+        uses: foo-software/lighthouse-check-status-action@master
+        with:
+          lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
+          minAccessibilityScore: "0"
+          minBestPracticesScore: "0"
+          minPerformanceScore: "0"
+          minProgressiveWebAppScore: "0"
+          minSeoScore: "0"
