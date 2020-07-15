@@ -19,7 +19,7 @@ jobs:
           github-token: ${{github.token}}
           script: |
             const prNumber = context.payload.number;
-            const prURL = `https://deploy-preview-${prNumber}--template.netlify.app/`
+            const prURL = `https://deploy-preview-${prNumber}--cot-react-template.netlify.app/`
             core.setOutput('prURL', prURL);
             console.log(prURL)
 
@@ -40,8 +40,8 @@ jobs:
         uses: foo-software/lighthouse-check-status-action@master
         with:
           lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
-          minAccessibilityScore: "0"
-          minBestPracticesScore: "0"
-          minPerformanceScore: "0"
+          minAccessibilityScore: "10"
+          minBestPracticesScore: "10"
+          minPerformanceScore: "10"
           minProgressiveWebAppScore: "0"
-          minSeoScore: "0"
+          minSeoScore: "10"
