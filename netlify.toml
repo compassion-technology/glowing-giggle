@@ -3,7 +3,7 @@
 # will inherit these settings.
 [context.production]
   [context.production.environment]
-    APP_ID = "REACT_APP_PROD"
+# Set these in the Netlify UI so they are not committed to the repository
 
 # Stage context:
 # Deploys from this branch will take these settings
