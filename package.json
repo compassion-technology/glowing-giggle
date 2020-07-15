@@ -1,5 +1,5 @@
 {
-  "name": "react-template",
+  "name": "react-template-web",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,6 +9,10 @@
     "fix": "eslint . --fix",
     "build:profile": "webpack --config ./webpack/webpack.config.js --mode production --profile --json > stats.json",
     "analyze": "webpack-bundle-analyzer ./stats.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/compassion-technology/react-template-web.git"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
