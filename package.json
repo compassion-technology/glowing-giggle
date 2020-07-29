@@ -53,9 +53,7 @@
     "webpack-pwa-manifest": "^4.2.0"
   },
   "dependencies": {
-    "@cot/auth": "^2.0.0",
-    "@cot/logger": "^1.0.2",
-    "@cot/session-manager": "^1.0.1",
+    "@compassion-technology/logger": "^1.0.2",
     "axios": "^0.19.2",
     "identity-obj-proxy": "^3.0.0",
     "react": "^16.13.0",
