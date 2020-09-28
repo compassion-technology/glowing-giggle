@@ -53,7 +53,9 @@
     "webpack-pwa-manifest": "^4.2.0"
   },
   "dependencies": {
+    "@compassion-technology/forms": "0.0.18",
     "@compassion-technology/logger": "^1.0.2",
+    "@compassion-technology/validators": "^0.1.93",
     "axios": "^0.19.2",
     "identity-obj-proxy": "^3.0.0",
     "react": "^16.13.0",
