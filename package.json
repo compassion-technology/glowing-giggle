@@ -1,5 +1,5 @@
 {
-  "name": "react-template-web",
+  "name": "glowing-giggle-web",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/compassion-technology/react-template-web.git"
+    "url": "git+https://github.com/compassion-technology/glowing-giggle.git"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
