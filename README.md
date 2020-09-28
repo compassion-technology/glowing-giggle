@@ -1,4 +1,6 @@
-# Example of Non-CRA React App
+# Glowing Giggle Hackathon React App
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cb503882-d2aa-4f81-a632-cc994024102e/deploy-status)](https://app.netlify.com/sites/glowing-giggle/deploys)
 
 ## Installing
 ```
