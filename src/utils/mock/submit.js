@@ -1,11 +1,11 @@
-import sleep from './common'
+import { sleep } from './common'
 
 export const mockSubmitOK = async () => {
-  await sleep(3000)
+  await sleep()
   return {}
 }
 
 export const mockSubmitError = async () => {
-  await sleep(3000)
+  await sleep()
   return {}
 }
