@@ -81,37 +81,6 @@
   width: 320px;
 }
 
-.heading button {
-  background-color: #0084ff;
-  border: 1px solid #0084ff;
-  border-radius: 24px;
-  color: #fff;
-  display: block;
-  font-size: 19px;
-  font-weight: 500;
-  height: 40px;
-  margin: 16px 0;
-  padding: 2px 20px;
-  width: 120px;
-}
-
-.heading input:focus {
-  border: 1px solid #0084ff;
-  border-radius: 10px;
-  outline: none;
-}
-
-.heading button:active {
-  background-color: #0077e5;
-  border: 1px solid transparent;
-  opacity: 0.2;
-}
-.heading button:focus {
-  border: 1px solid #0084ff;
-  border-radius: 24px;
-  outline: none;
-}
-
 .downloads {
   display: flex;
   flex-direction: column;

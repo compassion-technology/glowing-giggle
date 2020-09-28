@@ -1,12 +1,15 @@
 import React from 'react'
 
-import chat from '../../assets/chat.png'
-import apple from '../../assets/apple.svg'
-import google from '../../assets/google.svg'
-import together from '../../assets/together.svg'
-import translate from '../../assets/translate.svg'
-import camera from '../../assets/camera.svg'
-import emoji from '../../assets/emoji.svg'
+import chat from '@assets/chat.png'
+import apple from '@assets/apple.svg'
+import google from '@assets/google.svg'
+import together from '@assets/together.svg'
+import translate from '@assets/translate.svg'
+import camera from '@assets/camera.svg'
+import emoji from '@assets/emoji.svg'
+
+import Form from '@components/Form'
+import { getLanguageValue } from '@utils/localization'
 
 import styles from './Home.module.css'
 
@@ -33,11 +36,7 @@ const Home = () => {
             Compassion has developed a chat app for sponsors to say connected with their beneficiary
             child.
           </h6>
-          <form>
-            <input placeholder='Email Address' />
-            <input placeholder='Sponsor Id No.' />
-            <button>Sign Up</button>
-          </form>
+          <Form />
           <div className={styles.downloads}>
             <img src={apple} />
             <img src={google} />
@@ -50,7 +49,7 @@ const Home = () => {
         <div className={styles.methods}>
           <div>
             <img src={translate} />
-            <h4>Don't worry about translation</h4>
+            <h4>{getLanguageValue('Don&apos;t worry about translation')}</h4>
             <h6>
               Our chat app translates your language to the language of your sponsor child and vice
               versa.
