@@ -1,0 +1,47 @@
+/**********  Global defaults ***************/
+* { box-sizing: border-box; }
+
+html { height: 100%; }
+html,
+body { font: 16px/1.4 Gotham, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
+body {
+  background: #fff;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  -webkit-text-size-adjust: 110%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: auto;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6  { font-weight: 600; line-height: 1.1; -webkit-font-smoothing: antialiased; }
+h1 { font-size: 1.25rem; }
+
+b, strong   { font-weight: 600; -webkit-font-smoothing: antialiased; }
+img         { max-width: 100%; }
+
+/**********  Media Queries  ***************/
+@media (min-width: 600px), (min-height: 900px) {
+  body { padding: 20px 0; }
+
+  #app {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    height: 90vh;
+    max-height: 800px;
+    max-width: 500px;
+    width: 90%;
+  }
+
+  div[data-steps] { position: absolute; }
+}

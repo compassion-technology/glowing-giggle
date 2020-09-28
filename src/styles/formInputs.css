@@ -1,0 +1,45 @@
+/**********  Generic Inputs  ***************/
+button { cursor: pointer; }
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+select,
+textarea {
+  background-color: #fff;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+  padding: 5px;
+  max-width: 100%;
+  resize: none;
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+select {
+  background: #fff no-repeat right 5px center url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC');
+  padding: 5px 24px 5px 5px;
+}
+
+input[type='text']:focus,
+input[type='search']:focus,
+textarea:focus,
+select:focus {
+  border: 3px solid #005EB8;
+  background-color: #f7fafc;
+}
+
+/**********  Customixe Password Toggle  ***************/
+div[class^='toggle-password'] > button {
+  border-color: #ccc;
+  border-radius: 0 5px 5px 0;
+}
+
+div[class^='toggle-password'] > input {
+  border-radius: 5px 0 0 5px;
+}
