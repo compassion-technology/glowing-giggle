@@ -1,14 +1,12 @@
 import React from 'react'
 
 import chat from '@assets/chat.png'
-import apple from '@assets/apple.svg'
-import google from '@assets/google.svg'
 import together from '@assets/together.svg'
 import translate from '@assets/translate.svg'
 import camera from '@assets/camera.svg'
 import emoji from '@assets/emoji.svg'
 
-import Form from '@components/Form'
+import RegistrationForm from '@components/RegistrationForm'
 import { getLanguageValue } from '@utils/localization'
 
 import styles from './Home.module.css'
@@ -36,11 +34,9 @@ const Home = () => {
             Compassion has developed a chat app for sponsors to say connected with their beneficiary
             child.
           </h6>
-          <Form />
-          <div className={styles.downloads}>
-            <img src={apple} />
-            <img src={google} />
-          </div>
+
+          <RegistrationForm />
+
         </div>
         <img src={together} />
       </div>

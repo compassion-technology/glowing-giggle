@@ -4,9 +4,10 @@ import { isEmail, isNotEmpty, isNumeric } from '@compassion-technology/validator
 
 import { getLanguageValue } from '@utils/localization'
 
-import styles from './Form.module.css'
+import styles from './RegistrationForm.module.css'
+import { mockValidateNoEligibleChildren, mockValidateOK } from '../../utils/mock/validate'
 
-const Form = () => {
+const RegistrationForm = () => {
   const [error, setError] = useState('')
   const { Form, values, isSubmitting, setIsSubmitting } = useForm()
   const { email, id } = values
@@ -16,7 +17,15 @@ const Form = () => {
       setError('')
       setIsSubmitting(true)
 
+      if (email.includes('john')) {
+        const { data } = await mockValidateOK()
 
+        console.log(data)
+      } else {
+        const { errors } = await mockValidateNoEligibleChildren()
+
+        setError(errors)
+      }
     }
 
     setIsSubmitting(false)
@@ -29,7 +38,7 @@ const Form = () => {
       <Form onSubmit={onSubmit} validateOnEvents={[EVENT_TYPES.onBlur]}>
         <FormInput
           type='input'
-          name='Email'
+          name='email'
           label={getLanguageValue('Email Address')}
           validations={[
             { validator: isNotEmpty, message: getLanguageValue('Field is required') },
@@ -52,7 +61,7 @@ const Form = () => {
         <div className={styles.error}>{error}</div>
 
         <div className={styles.actions}>
-          <button className={styles['button-disabled']} type='submit' disabled={!isValid} data-submitting={isSubmitting}>
+          <button type='submit' disabled={!isValid} data-submitting={isSubmitting}>
             {getLanguageValue('Next')}
           </button>
         </div>
@@ -61,4 +70,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default RegistrationForm

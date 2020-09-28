@@ -1,4 +1,4 @@
-import sleep from './common'
+import { sleep } from './common'
 
 const validateOK = {
   'children': [
@@ -16,11 +16,11 @@ const validateOK = {
 }
 
 export const mockValidateOK = async () => {
-  await sleep(3000)
-  return validateOK
+  await sleep()
+  return { data: validateOK, errors: '' }
 }
 
 export const mockValidateNoEligibleChildren = async () => {
-  await sleep(3000)
-  return {}
+  await sleep()
+  return { data: {}, errors: 'No Eligible Children' }
 }

@@ -1,6 +1,5 @@
 .register {
   margin: auto;
-  width: 50%;
 }
 
 button {
@@ -19,7 +18,7 @@ button {
 
 button:disabled {
   color: black;
-  background-color: rgba(239, 239, 239, 0.3);
+  background-color: lightgray;
   border: rgba(118, 118, 118, 0.3);
 }
 
@@ -39,4 +38,8 @@ button:focus {
   border: 1px solid #0084ff;
   border-radius: 24px;
   outline: none;
+}
+
+.error {
+  color: red;
 }
