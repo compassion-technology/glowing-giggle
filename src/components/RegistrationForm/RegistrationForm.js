@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Redirect } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { FormInput, useForm, EVENT_TYPES, VALIDATION_DISPLAY } from '@compassion-technology/forms'
 import { isEmail, isNotEmpty, isNumeric } from '@compassion-technology/validators'
 
@@ -10,12 +10,17 @@ import { mockValidateNoEligibleChildren, mockValidateOK } from '../../utils/mock
 import styles from './RegistrationForm.module.css'
 
 const RegistrationForm = () => {
+  const history = useHistory()
+
   const [shouldRedirect, setShouldRedirect] = useState(false)
   const [error, setError] = useState('')
-  const [results, setResults] = useState([])
 
   const { Form, values, isSubmitting, setIsSubmitting } = useForm()
   const { email, id } = values
+
+  const redirect = data => {
+    history.push(`/beneficiaries/${12345678}`, { data })
+  }
 
   const onSubmit = async errors => {
     if (!isSubmitting && !errors) {
@@ -23,9 +28,7 @@ const RegistrationForm = () => {
       setIsSubmitting(true)
       if (email.includes('john')) {
         const { data } = await mockValidateOK()
-        console.log(data)
-        setShouldRedirect(true)
-        setResults(data)
+        redirect(data)
       } else {
         const { errors } = await mockValidateNoEligibleChildren()
 
@@ -39,9 +42,7 @@ const RegistrationForm = () => {
 
   const isValid = email || id > 0
 
-  return shouldRedirect ? (
-    results.length > 0 && <Redirect from='/' to={`beneficiaries/${id}`} state={results} noThrow />
-  ) : (
+  return (
     <div className={styles.register}>
       <Form onSubmit={onSubmit} validateOnEvents={[EVENT_TYPES.onBlur]}>
         <FormInput
