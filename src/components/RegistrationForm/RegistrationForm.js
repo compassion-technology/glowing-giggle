@@ -28,7 +28,6 @@ const RegistrationForm = () => {
         setResults(data)
       } else {
         const { errors } = await mockValidateNoEligibleChildren()
-
         setError(errors)
         setShouldRedirect(true)
       }
