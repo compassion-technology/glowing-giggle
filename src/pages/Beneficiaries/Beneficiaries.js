@@ -1,9 +1,17 @@
 import React from 'react'
 
+import { mockValidateNoEligibleChildren, mockValidateOK } from '../../utils/mock/validate'
+
 import styles from './Beneficiaries.module.css'
 
 const Beneficiaries = () => {
-  return <div className={styles.beneficiaries}>Beneficiaries</div>
+  const { data } = mockValidateOK()
+
+  return (
+    <div className={styles.beneficiaries}>
+      {}
+    </div>
+  )
 }
 
 export default Beneficiaries
