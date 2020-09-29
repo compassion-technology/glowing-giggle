@@ -36,7 +36,6 @@ const Home = () => {
           </h6>
 
           <RegistrationForm />
-
         </div>
         <img src={together} />
       </div>

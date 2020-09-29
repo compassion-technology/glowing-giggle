@@ -1,13 +1,11 @@
-import React  from 'react'
+import React from 'react'
 
 import styles from './Register.module.css'
 
 const Register = () => {
   return (
     <div className={styles.register}>
-      <ul>
-
-      </ul>
+      <ul></ul>
     </div>
   )
 }
