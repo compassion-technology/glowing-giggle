@@ -1,17 +1,22 @@
-import React from 'react'
-
-import { mockValidateNoEligibleChildren, mockValidateOK } from '../../utils/mock/validate'
+import React, { useEffect, useState } from 'react'
 
 import styles from './Beneficiaries.module.css'
 
-const Beneficiaries = () => {
-  const { data } = mockValidateOK()
+const Beneficiaries = ({ match, history, location }) => {
+  const [benData, setBenData] = useState(location.state.data)
+  const { id } = match.params
 
-  return (
-    <div className={styles.beneficiaries}>
-      {}
-    </div>
-  )
+  useEffect(() => {
+    if (!benData) {
+      history.push('/')
+    }
+  }, [benData])
+
+  console.log(benData, ' ben data')
+
+  const { name = '' } = benData[id]
+
+  return <div className={styles.beneficiaries}>{<span>{name}</span>}</div>
 }
 
 export default Beneficiaries
