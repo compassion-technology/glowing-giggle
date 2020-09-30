@@ -24,3 +24,5 @@ chrome-user-data
 *.swo
 dist/
 stats.json
+whatsapp-bot/whatsapp-bot-venv/
+whatsapp-bot/whatsapp-bot-venv/...
