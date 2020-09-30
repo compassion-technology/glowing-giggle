@@ -1,14 +1,14 @@
 .downloads {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .downloads img {
-    height: 120px;
-    margin-top: -24px;
-    width: 120px;
+  height: 120px;
+  margin-top: -24px;
+  width: 120px;
 }
 
 .downloads img:last-of-type {
-    margin-top: -72px;
+  margin-top: -96px;
 }

@@ -1,10 +1,11 @@
 import { sleep } from './common'
+import graduate from '../../assets/graduate.jpg'
 
 const validateOK = {
   12345678: {
     id: '12345678',
-    name: 'Ricky',
-    image: 'https://placekitten.com/101/101'
+    name: 'Grace',
+    image: graduate
   },
   12345679: {
     id: '12345679',
