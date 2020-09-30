@@ -1,22 +1,8 @@
-import { sleep } from './common'
-import graduate from '../../assets/graduate.jpg'
-
-const validateOK = {
-  12345678: {
-    id: '12345678',
-    name: 'Grace',
-    image: graduate
-  },
-  12345679: {
-    id: '12345679',
-    name: 'Penelope',
-    image: 'https://placekitten.com/102/102'
-  }
-}
+import { beneficiaryList, sleep } from './common'
 
 export const mockValidateOK = async () => {
   await sleep()
-  return { data: validateOK, errors: '' }
+  return { data: beneficiaryList, errors: '' }
 }
 
 export const mockValidateNoEligibleChildren = async () => {
