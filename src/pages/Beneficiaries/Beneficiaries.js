@@ -14,6 +14,7 @@ const Beneficiaries = ({ match, history, location }) => {
 
   console.log(benData, ' ben data')
 
+<<<<<<< HEAD
   const { name = '', image = '' } = benData[id]
 
   return (
@@ -26,6 +27,11 @@ const Beneficiaries = ({ match, history, location }) => {
       }
     </div>
   )
+=======
+  const { name = '' } = benData[id]
+
+  return <div className={styles.beneficiaries}>{<span>{name}</span>}</div>
+>>>>>>> c48a712d24c301e71156dd47cf8d5b08023115b6
 }
 
 export default Beneficiaries
