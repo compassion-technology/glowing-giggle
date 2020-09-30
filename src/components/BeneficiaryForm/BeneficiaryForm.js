@@ -18,7 +18,7 @@ const BeneficiaryForm = () => {
   const { email, id } = values
 
   const redirect = data => {
-    history.push(`/beneficiary/${12345678}`, { data })
+    history.push(`/beneficiaries/${12345678}`, { data })
   }
 
   const onSubmit = async errors => {
