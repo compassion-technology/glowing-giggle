@@ -9,8 +9,13 @@
   justify-content: space-between;
   flex-wrap: nowrap;
   height: 100px;
-  padding: 8px 80px;
+  padding: 8px 112px;
   position: relative;
+}
+
+.skippy {
+  height: 40px;
+  width: auto;
 }
 
 .list {
@@ -38,13 +43,20 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 540px;
-  padding: 8px 80px;
+  height: 500px;
+  margin-top: 20px;
+  padding: 0 120px;
 }
 
-.sectionone img {
-  height: 400px;
-  width: 400px;
+.whatsapp {
+  height: 40px;
+  margin-left: 4px;
+  width: auto;
+}
+
+.world {
+  height: auto;
+  width: 300px;
 }
 
 .heading {
@@ -60,7 +72,11 @@
 .heading h6 {
   color: rgba(0, 0, 0, 0.55);
   line-height: 1.32;
-  margin-top: 16px;
+  margin: 24px 0;
+}
+
+.bold {
+  font-weight: 800;
 }
 
 .heading form {
@@ -82,10 +98,16 @@
 }
 
 .sectiontwo {
-  background: rgba(0, 0, 0, 0.04);
-  height: 420px;
-  margin: 25px auto 0;
-  padding: 56px 80px;
+  background: #fafafa;
+  height: 500px;
+  margin: 48px auto 0;
+  padding: 48px 80px;
+}
+
+.whatsappheader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sectiontwo h1 {
@@ -102,8 +124,10 @@
 }
 
 .methods img {
+  border-radius: 10px;
   height: 180px;
-  width: 180px;
+  margin: 32px 0;
+  width: auto;
 }
 
 .methods div {

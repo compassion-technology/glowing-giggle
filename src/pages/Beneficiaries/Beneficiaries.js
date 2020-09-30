@@ -25,8 +25,8 @@ const Beneficiaries = ({ match, history, location }) => {
         <img src={image} />
         <div className={styles.info}>
           <h6>Messages</h6>
-          <h1>{name} wants to chat with you</h1>
-          <h6>Simply download the chat app on the Apple Store or Google Play and get chatting.</h6>
+          <h1>{name} wants to chat with you on WhatsApp</h1>
+          <h6>Simply click the WhatsApp icon below to get chatting.</h6>
           <AppIcons />
         </div>
       </div>

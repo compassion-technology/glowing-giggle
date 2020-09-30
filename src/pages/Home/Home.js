@@ -1,10 +1,11 @@
 import React from 'react'
 
-import chat from '@assets/chat.png'
-import together from '@assets/together.svg'
+import skippy from '@assets/skippy.png'
+import whatsappdemo from '@assets/whatsappdemo.png'
 import translate from '@assets/translate.svg'
-import camera from '@assets/camera.svg'
-import emoji from '@assets/emoji.svg'
+import message from '@assets/message.svg'
+import moderate from '@assets/moderate.svg'
+import whatsapp from '@assets/whatsapp_transparent.png'
 
 import BeneficiaryForm from '@components/BeneficiaryForm'
 import { getLanguageValue } from '@utils/localization'
@@ -15,9 +16,9 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <div className={styles.nav}>
-        <img src={chat} />
+        <img src={skippy} className={styles.skippy} />
         <ul className={styles.list}>
-          <li>Why?</li>
+          <li>Why WhatsApp?</li>
           <li>Features</li>
           <li>Privacy & Safety</li>
         </ul>
@@ -25,43 +26,47 @@ const Home = () => {
       <div className={styles.sectionone}>
         <div className={styles.heading}>
           <h1>
-            Stay connected
+            Stay connected,
             <br />
-            forever.
+            forever. <img src={whatsapp} className={styles.whatsapp} />
           </h1>
           <h6>
-            You no longer have to lose contact with your sponsor child after they graduate.
-            Compassion has developed a chat app for sponsors to say connected with their beneficiary
-            child.
+            Compassion moderated <b className={styles.bold}>WhatsApp</b> is a simple way to stay
+            connected with your sponsor child even after they graduate.
           </h6>
 
           <BeneficiaryForm />
         </div>
-        <img src={together} />
+        <img src={whatsappdemo} className={styles.world} />
       </div>
       <div className={styles.sectiontwo}>
-        <h1>Connect whenever in various ways</h1>
+        <div className={styles.whatsappheader}>
+          <h1>Connect safely on WhatsApp</h1>
+        </div>
         <div className={styles.methods}>
           <div>
+            <img src={message} />
+            <h4>{getLanguageValue('Popular Chat App')}</h4>
+            <h6>
+              Ranked #4 in Social Networking on the Apple App Store, WhatsApp is a reliable
+              messaging system for you and your sponsor child.
+            </h6>
+          </div>
+          <div>
+            <img src={moderate} />
+            <h4>{getLanguageValue('Compassion Moderated Chats')}</h4>
+            <h6>
+              We make sure your safety and the child's safety is our priority. All chats are
+              thoroughly moderated for security.
+            </h6>
+          </div>
+          <div>
             <img src={translate} />
-            <h4>{getLanguageValue('No need to worry about translating')}</h4>
+            <h4>{getLanguageValue('Automatic Translation')}</h4>
             <h6>
-              Our chat app translates your language to the language of your sponsor child and vice
-              versa.
+              Our moderation system translates your language to the language of your sponsor child
+              and vice versa for your convenience.
             </h6>
-          </div>
-          <div>
-            <img src={camera} />
-            <h4>Share photos and videos</h4>
-            <h6>
-              Easily show your sponsor child pictures or videos from your hike or something you did
-              from the day.
-            </h6>
-          </div>
-          <div>
-            <img src={emoji} />
-            <h4>Use fun emojis</h4>
-            <h6>Make them laugh with stickers and GIFs!</h6>
           </div>
         </div>
       </div>
