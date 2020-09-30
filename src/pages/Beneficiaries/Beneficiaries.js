@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
-import hiking from '../../assets/hiking.jpg'
-import AppIcons from '../../components/AppIcons'
+import hiking from '@assets/hiking.jpg'
+import AppIcons from '@components/AppIcons'
 
 import styles from './Beneficiaries.module.css'
 

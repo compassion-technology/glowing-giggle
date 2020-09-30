@@ -12,7 +12,6 @@ import styles from './RegistrationForm.module.css'
 const RegistrationForm = () => {
   const history = useHistory()
 
-  const [shouldRedirect, setShouldRedirect] = useState(false)
   const [error, setError] = useState('')
 
   const { Form, values, isSubmitting, setIsSubmitting } = useForm()
@@ -32,7 +31,6 @@ const RegistrationForm = () => {
       } else {
         const { errors } = await mockValidateNoEligibleChildren()
         setError(errors)
-        setShouldRedirect(true)
       }
     }
 
