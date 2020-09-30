@@ -7,9 +7,9 @@ import { getLanguageValue } from '@utils/localization'
 
 import { mockValidateNoEligibleChildren, mockValidateOK } from '../../utils/mock/validate'
 
-import styles from './RegistrationForm.module.css'
+import styles from './SponsorForm.module.css'
 
-const RegistrationForm = () => {
+const SponsorForm = () => {
   const history = useHistory()
 
   const [error, setError] = useState('')
@@ -81,4 +81,4 @@ const RegistrationForm = () => {
   )
 }
 
-export default RegistrationForm
+export default SponsorForm

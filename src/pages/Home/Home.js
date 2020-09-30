@@ -6,7 +6,7 @@ import translate from '@assets/translate.svg'
 import camera from '@assets/camera.svg'
 import emoji from '@assets/emoji.svg'
 
-import RegistrationForm from '@components/RegistrationForm'
+import BeneficiaryForm from '@components/BeneficiaryForm'
 import { getLanguageValue } from '@utils/localization'
 
 import styles from './Home.module.css'
@@ -35,7 +35,7 @@ const Home = () => {
             child.
           </h6>
 
-          <RegistrationForm />
+          <BeneficiaryForm />
         </div>
         <img src={together} />
       </div>
