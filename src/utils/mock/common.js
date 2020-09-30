@@ -1,6 +1,6 @@
 import graduate from '../../assets/graduate.jpg'
 
-const DEF_DELAY = 1000
+const DEF_DELAY = 500
 
 export const beneficiaryList = {
   12345678: {

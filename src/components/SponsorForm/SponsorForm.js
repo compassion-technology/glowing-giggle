@@ -5,7 +5,7 @@ import { isEmail, isNotEmpty, isNumeric } from '@compassion-technology/validator
 
 import { getLanguageValue } from '@utils/localization'
 
-import { mockValidateNoEligibleChildren, mockValidateOK } from '../../utils/mock/validate'
+import { mockSubmitBeneficiary } from '../../utils/mock/submit'
 
 import styles from './SponsorForm.module.css'
 
@@ -18,18 +18,18 @@ const SponsorForm = () => {
   const { email, id } = values
 
   const redirect = data => {
-    history.push(`/beneficiaries/${12345678}`, { data })
+    history.push(`/sponsor/${12345678}`, { data })
   }
 
   const onSubmit = async errors => {
     if (!isSubmitting && !errors) {
       setError('')
       setIsSubmitting(true)
-      if (email.includes('john')) {
-        const { data } = await mockValidateOK()
+      if (email.includes('pedro')) {
+        const { data } = await mockSubmitBeneficiary()
         redirect(data)
       } else {
-        const { errors } = await mockValidateNoEligibleChildren()
+        // const { errors } = await mockValidateNoEligibleChildren()
         setError(errors)
       }
     }
@@ -56,7 +56,7 @@ const SponsorForm = () => {
         <FormInput
           type='number'
           name='id'
-          label={getLanguageValue('Sponsor ID')}
+          label={getLanguageValue('Beneficiary ID')}
           validations={[
             { validator: isNotEmpty, message: getLanguageValue('Field is required') },
             { validator: isNumeric, message: getLanguageValue('Must be a number') }
