@@ -8,8 +8,10 @@ import styles from './AppIcons.module.css'
 const AppIcons = () => {
   return (
     <div className={styles.downloads}>
-      <img src={apple} />
-      <img src={google} />
+      <a href='https://hackathon-chat.netlify.app/chat/test/grace'>
+        <img src={apple} />
+        <img src={google} />
+      </a>
     </div>
   )
 }
