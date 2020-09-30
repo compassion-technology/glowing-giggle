@@ -22,7 +22,9 @@ const Beneficiaries = ({ match, history, location }) => {
   return (
     <div className={styles.beneficiaries}>
       <div className={styles.nav}>
-        <img src={skippy} className={styles.skippy} />
+        <a href={window.location.origin}>
+          <img src={skippy} className={styles.skippy} />
+        </a>
         <ul className={styles.list}>
           <li>Why WhatsApp?</li>
           <li>Features</li>

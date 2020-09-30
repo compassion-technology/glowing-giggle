@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import skippy from '@assets/skippy.png'
 import whatsappdemo from '@assets/whatsappdemo.png'
@@ -11,16 +11,36 @@ import BeneficiaryForm from '@components/BeneficiaryForm'
 import { getLanguageValue } from '@utils/localization'
 
 import styles from './Home.module.css'
+import { getLanguageId, setCOTLanguageId, SUPPORTED_LANGUAGES } from '../../utils/localization'
 
 const Home = () => {
+  const [languageId, setLanguageId] = useState(getLanguageId() || '')
+
+  const languageOnChange = ({ target: { value } }) => {
+    // Set local storage first, so when state update causes a re-render, and the new language keys are used
+
+    setCOTLanguageId(value)
+    setLanguageId(value)
+  }
+
   return (
     <div className={styles.home}>
       <div className={styles.nav}>
-        <img src={skippy} className={styles.skippy} />
+        <a href={window.location.origin}>
+          <img src={skippy} className={styles.skippy} />
+        </a>
         <ul className={styles.list}>
           <li>Why WhatsApp?</li>
-          <li>Features</li>
           <li>Privacy & Safety</li>
+          <li className={styles.optionsContainer}>
+            <select onChange={languageOnChange} value={languageId} id='lang'>
+              {SUPPORTED_LANGUAGES.map(language => (
+                <option key={language.id} value={language.id}>
+                  {language.name}
+                </option>
+              ))}
+            </select>
+          </li>
         </ul>
       </div>
       <div className={styles.sectionone}>

@@ -4,7 +4,7 @@ import sponsor from '../../assets/sponsor.jpg'
 
 const submitBeneficiary = {
   name: 'Jane Smith',
-  email: 'supporter@us.ci.org',
+  email: 'jane@us.ci.org',
   address: 'Compassion International \nColorado Springs, CO 80997',
   skype: 'compassion',
   facebook: 'compassionintl',

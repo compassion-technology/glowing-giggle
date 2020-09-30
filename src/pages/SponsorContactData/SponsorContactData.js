@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react'
 
 import hiking from '@assets/hiking.jpg'
-import AppIcons from '@components/AppIcons'
+import chat from '@assets/chat.png'
+import letterImg from '@assets/letter.svg'
+import facebookImg from '@assets/facebook.svg'
+import skypeImg from '@assets/skype.png'
 
 import styles from './SponsorContactData.module.css'
+import { getLanguageValue } from '../../utils/localization'
 
 const SponsorContactData = ({ history, location }) => {
   const [sponsorData, setSponsorData] = useState(location.state.data)
@@ -20,15 +24,31 @@ const SponsorContactData = ({ history, location }) => {
 
   return (
     <div className={styles.sponsor}>
+      <div className={styles.nav}>
+        <a href={`${window.location.origin}/register`}>
+          <img src={chat} />
+        </a>
+        <ul className={styles.list}>
+          <li>{getLanguageValue('Why?')}</li>
+          <li>{getLanguageValue('Privacy & Safety')}</li>
+        </ul>
+      </div>
       <div className={styles.section2}>
         <img src={image} />
         <div className={styles.info}>
           <h1>{name} wants to keep in contact with you!</h1>
-          <h4>You can contact your sponsor by sending a letter to</h4>
-          <h5>{address}</h5>
-          <h5>Email: {email}</h5>
-          <h5>Skype: {skype}</h5>
-          <h5>Facebook: {facebook}</h5>
+          <h5 className={styles['info-content']}>
+            <img src={letterImg} className={styles.icon} />
+            <span>{email}</span>
+          </h5>
+          <h5 className={styles['info-content']}>
+            <img src={skypeImg} className={styles.icon} />
+            <span>{skype}</span>
+          </h5>
+          <h5 className={styles['info-content']}>
+            <img src={facebookImg} className={styles.icon} />
+            <span>{facebook}</span>
+          </h5>
         </div>
       </div>
       <div className={styles.section3}>
