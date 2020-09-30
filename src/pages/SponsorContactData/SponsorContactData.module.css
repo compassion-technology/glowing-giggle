@@ -24,10 +24,10 @@
   text-align: left;
 }
 
-.info img {
-  height: 180px;
-  width: 180px;
-}
+/*.info img {*/
+/*  height: 180px;*/
+/*  width: 180px;*/
+/*}*/
 
 .section2 h6,
 .section3 h6 {
@@ -61,4 +61,46 @@
 .footer {
   padding: 8px 80px;
   margin-top: 40px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 100px;
+  padding: 8px 80px;
+  position: relative;
+}
+
+.list {
+  display: block;
+}
+
+.list li {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.55);
+  margin-right: 80px;
+  cursor: pointer;
+}
+
+.list li:hover {
+  color: #000;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.list li:last-of-type {
+  margin-right: 0;
+}
+
+.section2 .icon {
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+}
+
+.section2 .info-content {
+  display: flex;
+  align-items: center;
 }

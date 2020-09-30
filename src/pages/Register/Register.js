@@ -22,7 +22,9 @@ const Register = () => {
   return (
     <div className={styles.home}>
       <div className={styles.nav}>
-        <img src={chat} />
+        <a href={`${window.location.origin}/register`}>
+          <img src={chat} />
+        </a>
         <ul className={styles.list}>
           <li>{getLanguageValue('Why?')}</li>
           <li>{getLanguageValue('Privacy & Safety')}</li>
