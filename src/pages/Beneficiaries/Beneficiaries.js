@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import celebrate from '../../assets/celebrate.png'
+import hiking from '../../assets/hiking.jpg'
 import AppIcons from '../../components/AppIcons'
 
 import styles from './Beneficiaries.module.css'
@@ -30,7 +30,15 @@ const Beneficiaries = ({ match, history, location }) => {
           <AppIcons />
         </div>
       </div>
-      <div className={styles.section3}></div>
+      <div className={styles.section3}>
+        <div className={styles.info}>
+          <h6>Photos and Videos</h6>
+          <h1>Share with {name} your pictures and videos</h1>
+          <h6>Capture the moment on your phone and easily share it with your Compassion child.</h6>
+        </div>
+        <img src={hiking} />
+      </div>
+      <div className={styles.footer}>© 2020 Compassion International. All Rights Reserved.</div>
     </div>
   )
 }
