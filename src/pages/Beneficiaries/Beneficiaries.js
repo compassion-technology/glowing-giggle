@@ -14,9 +14,18 @@ const Beneficiaries = ({ match, history, location }) => {
 
   console.log(benData, ' ben data')
 
-  const { name = '' } = benData[id]
+  const { name = '', image = '' } = benData[id]
 
-  return <div className={styles.beneficiaries}>{<span>{name}</span>}</div>
+  return (
+    <div className={styles.beneficiaries}>
+      {
+        <span>
+          {name}
+          <img src={image} />
+        </span>
+      }
+    </div>
+  )
 }
 
 export default Beneficiaries

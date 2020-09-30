@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 600px;
+  height: 540px;
   padding: 8px 80px;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .heading {
-  margin-top: 36px;
+  margin-top: 8px;
   max-width: 50%;
 }
 

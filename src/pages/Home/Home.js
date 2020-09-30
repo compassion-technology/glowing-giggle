@@ -44,7 +44,7 @@ const Home = () => {
         <div className={styles.methods}>
           <div>
             <img src={translate} />
-            <h4>{getLanguageValue('Don&apos;t worry about translation')}</h4>
+            <h4>{getLanguageValue('No need to worry about translating')}</h4>
             <h6>
               Our chat app translates your language to the language of your sponsor child and vice
               versa.
