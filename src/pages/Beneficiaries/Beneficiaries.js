@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import hiking from '@assets/hiking.jpg'
+import skippy from '@assets/skippy.png'
 import AppIcons from '@components/AppIcons'
 
 import styles from './Beneficiaries.module.css'
@@ -21,16 +21,24 @@ const Beneficiaries = ({ match, history, location }) => {
 
   return (
     <div className={styles.beneficiaries}>
+      <div className={styles.nav}>
+        <img src={skippy} className={styles.skippy} />
+        <ul className={styles.list}>
+          <li>Why WhatsApp?</li>
+          <li>Features</li>
+          <li>Privacy & Safety</li>
+        </ul>
+      </div>
       <div className={styles.section2}>
         <img src={image} />
         <div className={styles.info}>
           <h6>Messages</h6>
-          <h1>{name} wants to chat with you</h1>
-          <h6>Simply download the chat app on the Apple Store or Google Play and get chatting.</h6>
+          <h1>{name} wants to chat with you on WhatsApp</h1>
+          <h6>Simply click the WhatsApp icon below to get chatting.</h6>
           <AppIcons />
         </div>
       </div>
-      <div className={styles.section3}>
+      {/* <div className={styles.section3}>
         <div className={styles.info}>
           <h6>Photos and Videos</h6>
           <h1>Share your pictures and videos with {name}!</h1>
@@ -38,7 +46,7 @@ const Beneficiaries = ({ match, history, location }) => {
         </div>
         <img src={hiking} />
       </div>
-      <div className={styles.footer}>© 2020 Compassion International. All Rights Reserved.</div>
+      <div className={styles.footer}>© 2020 Compassion International. All Rights Reserved.</div> */}
     </div>
   )
 }

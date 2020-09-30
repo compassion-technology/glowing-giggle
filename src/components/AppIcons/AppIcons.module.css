@@ -4,11 +4,5 @@
 }
 
 .downloads img {
-  height: 120px;
-  margin-top: -24px;
-  width: 120px;
-}
-
-.downloads img:last-of-type {
-  margin-top: -96px;
+  border-radius: 10px;
 }
