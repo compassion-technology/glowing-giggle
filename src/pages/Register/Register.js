@@ -31,8 +31,7 @@ const Register = () => {
           </h1>
           <h6>
             You no longer have to lose contact with your sponsor child after they graduate.
-            Compassion has developed a chat app for sponsors to say connected with their beneficiary
-            child.
+            If they have registered, you can use this form to find their contact information!
           </h6>
 
           <SponsorForm />

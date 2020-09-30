@@ -1,10 +1,14 @@
 import { sleep } from './common'
 
+import sponsor from '../../assets/sponsor.jpg'
+
 const submitBeneficiary = {
+  name: 'Jane Smith',
   email: 'supporter@us.ci.org',
   address: 'Compassion International \nColorado Springs, CO 80997',
   skype: 'compassion',
-  facebook: 'compassionintl'
+  facebook: 'compassionintl',
+  image: sponsor
 }
 
 export const mockSubmitOK = async () => {
@@ -20,5 +24,5 @@ export const mockSubmitError = async () => {
 // if a beneficiary is registering through microsite, return supporter's contact information
 export const mockSubmitBeneficiary = async () => {
   await sleep()
-  return submitBeneficiary
+  return { data: submitBeneficiary, errors: '' }
 }

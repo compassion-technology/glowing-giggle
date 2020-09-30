@@ -33,7 +33,7 @@ const Beneficiaries = ({ match, history, location }) => {
       <div className={styles.section3}>
         <div className={styles.info}>
           <h6>Photos and Videos</h6>
-          <h1>Share with {name} your pictures and videos</h1>
+          <h1>Share your pictures and videos with {name}!</h1>
           <h6>Capture the moment on your phone and easily share it with your Compassion child.</h6>
         </div>
         <img src={hiking} />
