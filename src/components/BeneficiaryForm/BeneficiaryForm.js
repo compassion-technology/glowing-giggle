@@ -25,7 +25,7 @@ const BeneficiaryForm = () => {
     if (!isSubmitting && !errors) {
       setError('')
       setIsSubmitting(true)
-      if (email.includes('john')) {
+      if (email.includes('jane')) {
         const { data } = await mockValidateOK()
         redirect(data)
       } else {

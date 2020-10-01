@@ -25,7 +25,7 @@ const SponsorForm = () => {
     if (!isSubmitting && !errors) {
       setError('')
       setIsSubmitting(true)
-      if (email.includes('pedro')) {
+      if (email.includes('grace')) {
         const { data } = await mockSubmitBeneficiary()
         redirect(data)
       } else {
