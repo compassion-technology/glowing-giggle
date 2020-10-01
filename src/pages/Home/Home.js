@@ -76,8 +76,9 @@ const Home = () => {
             <img src={moderate} />
             <h4>{getLanguageValue('Compassion Moderated Chats')}</h4>
             <h6>
-              We make sure your safety and the child's safety is our priority. All chats are
-              thoroughly moderated for security.
+              {getLanguageValue(
+                "We make sure your safety and the child's safety is our priority. All chats are thoroughly moderated for security."
+              )}
             </h6>
           </div>
           <div>

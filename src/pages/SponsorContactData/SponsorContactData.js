@@ -10,7 +10,7 @@ import styles from './SponsorContactData.module.css'
 import { getLanguageValue } from '../../utils/localization'
 
 const SponsorContactData = ({ history, location }) => {
-  const [sponsorData, setSponsorData] = useState(location.state.data)
+  const [sponsorData] = useState(location.state.data)
 
   useEffect(() => {
     if (!sponsorData) {
@@ -20,7 +20,7 @@ const SponsorContactData = ({ history, location }) => {
 
   console.log(sponsorData, ' sponsor data')
 
-  const { name, email = '', address = '', skype = '', facebook = '', image = '' } = sponsorData
+  const { name, email = '', skype = '', facebook = '', image = '' } = sponsorData
 
   return (
     <div className={styles.sponsor}>
