@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/webpack.config.js --mode development",
     "build:prod": "webpack --config ./webpack/webpack.config.js --mode production",
-    "test": "eslint . && jest",
+    "test": "eslint .",
     "fix": "eslint . --fix",
     "build:profile": "webpack --config ./webpack/webpack.config.js --mode production --profile --json > stats.json",
     "analyze": "webpack-bundle-analyzer ./stats.json"
@@ -58,7 +58,6 @@
     "@compassion-technology/validators": "^0.1.93",
     "axios": "^0.19.2",
     "identity-obj-proxy": "^3.0.0",
-    "little-state-machine": "^3.1.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0"
