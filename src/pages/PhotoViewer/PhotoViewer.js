@@ -21,9 +21,7 @@ const PhotoViewer = () => {
     imgURL = grace3
   }
 
-  return (
-    <img src={imgURL} />
-  )
+  return <img src={imgURL} />
 }
 
 export default PhotoViewer
