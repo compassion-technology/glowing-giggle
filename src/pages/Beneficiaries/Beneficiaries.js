@@ -36,7 +36,11 @@ const Beneficiaries = ({ match, history, location }) => {
         <div className={styles.info}>
           <h6>Messages</h6>
           <h1>{name} wants to chat with you on WhatsApp</h1>
-          <h6>Simply click the WhatsApp icon below to get chatting.</h6>
+          <h6>
+            Simply click the WhatsApp icon below or
+            <br />
+            enter key: <b>mmret</b> in your WhatsApp to get chatting.
+          </h6>
           <AppIcons />
         </div>
       </div>
