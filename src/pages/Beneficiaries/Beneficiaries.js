@@ -6,7 +6,7 @@ import AppIcons from '@components/AppIcons'
 import styles from './Beneficiaries.module.css'
 
 const Beneficiaries = ({ match, history, location }) => {
-  const [benData, setBenData] = useState(location.state.data)
+  const [benData] = useState(location.state.data)
   const { id } = match.params
 
   useEffect(() => {
